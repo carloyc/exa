@@ -1,19 +1,19 @@
 
 function update(nombre){
     let nombre = document.querySelector("nombre").value;
-    let apellidomaterno = document.querySelector("apellidomaterno").value;
-    let apellidopaterno = document.querySelector("apellidopaterno").value;
+    let apellidopaterno = document.querySelector("apellidomaterno").value;
+    let apellidomaterno = document.querySelector("apellidopaterno").value;
     let favor = document.querySelector("favor").value;
-    console.log(data = { nombre: nombre, apellido1: apellidomaterno, apellido2: apellidopaterno, Pokemon: favor});
+    console.log(data = { nombre: nombre, apellidopaterno: apellidopaterno, apellidomaterno: apellidomaterno, favor: favor});
     datos();
 }
 
 function create() {
     let nombre = document.querySelector("nombre").value;
-    let apellidomaterno = document.querySelector("apellidomaterno").value;
     let apellidopaterno = document.querySelector("apellidopaterno").value;
+    let apellidomaterno = document.querySelector("apellidomaterno").value;
     let favor = document.querySelector("favor").value;
-    console.log(data = { nombre: nombre, apellido1: apellidomaterno, apellido2: apellidopaterno, Pokemon: favor});
+    console.log(data = { nombre: nombre, apellidopaterno: apellidopaterno, apellidomaterno: apellidomaterno, favor: favor});
     datos();
 }
 
@@ -21,9 +21,17 @@ function create() {
 
 function delete() {
     let nombre = document.querySelector("#nombre").value;
-    let apellidomaterno = document.querySelector("apellidomaterno").value;
     let apellidopaterno = document.querySelector("apellidopaterno").value;
+    let apellidomaterno = document.querySelector("apellidomaterno").value;
     let favor = document.querySelector("favor").value;
-    console.log(data = { nombre: null, apellido1: null, apellido2: null, Pokemon: null});
+    console.log(data = { nombre: null, apellidopaterno: null, apellidomaterno: null, favor: null});
 }
 
+function Mostrar() {
+    panel.textContent = "";
+    data.forEach(x => {
+        f = document.createElement("option");
+        f.innerText = `${x.nombre} ${x.apellidopaterno} ${x.apellidomaterno} ${x.favor}`;
+        panel.append(f);
+    });
+}
