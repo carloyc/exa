@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Api</title>
+</head>
+<body>
+    <form method="POST">
+        <div >
+            <label for="nombre" class="visually-hidden">Nombre:</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre:">
+        </div>
+        <div >
+            <label for="apellido1" class="visually-hidden">Apellido paterno :</label>
+            <input type="text" class="form-control" name="apellido1" id="apellido1" placeholder="Primer Apellido:">
+        </div>
+        <br>
+        <div class="col-auto">
+            <label for="apellido2" class="visually-hidden">Apellido Materno:</label>
+            <input type="text" class="form-control" name="apellido2" id="apellido2" placeholder="Segundo Apellido:">
+        </div>
+        <br>
+        <div >
+            <label>Pokemon Favorito:</label>
+                <select name="favor" id="favor">
+                <option value="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+                </select>
+        </div>
+        <button onclick="btn-create()" type="submit" class="btn btn-success"><i class="fas fa-plus"></i>Registrar:</button>
+    </form>
+
+
+
+
+
+
+
+    <script src="/main.js"></script>
+</body>
+</html>
